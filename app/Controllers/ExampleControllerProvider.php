@@ -14,11 +14,15 @@ class ExampleControllerProvider implements ControllerProviderInterface
 
         // GET /
         $controllers->get('/', function (Application $app) {
+            $app['monolog']->addInfo('Redirecting to /en');
+
             return $app->redirect('/en');
         });
 
         // GET /cached
         $controllers->get('/cached', function (Application $app) {
+            $app['monolog']->addInfo('This response is cached');
+
             $response = new Response(
                 $app['twig']->render('example.twig', array(
                     'hello' => $app['translator']->trans('hello', array('%name%' => 'Toon')),
