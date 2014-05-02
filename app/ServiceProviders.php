@@ -52,15 +52,8 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
     return $translator;
 }));
 
-/*
 // Doctrine provider
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-        'driver' => 'pdo_sqlite',
-        'path' => $app['base_dir'] . '/app.db',
-    ),
-));
-*/
+$app->register(new Silex\Provider\DoctrineServiceProvider());
 
 // Cache provider
 $app->register(new Silex\Provider\HttpCacheServiceProvider());
