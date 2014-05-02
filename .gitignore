@@ -1,5 +1,13 @@
+# Config files
+/app/config.yml
+
+# Composer
 /vendor/*
+
+# Vagrant
 /.vagrant/*
+
+# Vim
 /tags
 *.swp
 /session.vim

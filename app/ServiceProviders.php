@@ -35,26 +35,12 @@ $app['security.firewalls'] = array(
 
 // Swift mailer provider
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
-$app['swiftmailer.options'] = array(
-    'host' => 'localhost',
-    'port' => '25',
-    'username' => null,
-    'password' => null,
-    'encryption' => null,
-    'auth_mode' => null
-);
 
 // Monolog provider
-$app->register(new Silex\Provider\MonologServiceProvider(), array(
-    'monolog.logfile' => '/tmp/silex/development.log',
-    'monolog.name' => 'silex',
-    'monolog.level' => 'DEBUG',
-));
+$app->register(new Silex\Provider\MonologServiceProvider());
 
 // Translation provider
-$app->register(new Silex\Provider\TranslationServiceProvider(), array(
-    'locale_fallbacks' => array('en'),
-));
+$app->register(new Silex\Provider\TranslationServiceProvider());
 $app['translator'] = $app->share($app->extend('translator', function($translator, $app) {
     $translator->addLoader('yaml', new Symfony\Component\Translation\Loader\YamlFileLoader());
 
@@ -77,10 +63,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 */
 
 // Cache provider
-$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
-    'http_cache.cache_dir' => '/tmp/silex/cache/',
-    'http_cache.esi' => null,
-));
+$app->register(new Silex\Provider\HttpCacheServiceProvider());
 // Trust the current host for caching
 Request::setTrustedProxies(array('127.0.0.1'));
 

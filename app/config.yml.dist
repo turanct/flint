@@ -1,0 +1,25 @@
+# Debug mode
+debug: true
+
+# Cache
+http_cache.cache_dir: __BASEDIR__/app/Cache/
+http_cache.esi: null
+
+# Logging
+monolog.logfile: __BASEDIR__/app/Logs/development.log
+monolog.name: silex
+monolog.level: DEBUG
+
+# Locale
+locale_fallbacks:
+    - en
+
+# Swiftmailer
+swiftmailer.options:
+    host: localhost
+    port: 25
+    username: ~
+    password: ~
+    encryption: ~
+    auth_mode: ~
+

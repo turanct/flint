@@ -13,7 +13,7 @@ Requirements
 - E-mails
 - Caching
 - Error Handling / Error reporting to Errbit
-- Configuration via YAML file(s)
+- Configuration via YAML file(s) [Yaml Config Service Provider](https://github.com/deralex/YamlConfigServiceProvider)
 
 
 Questions
