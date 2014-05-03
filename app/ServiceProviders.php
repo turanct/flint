@@ -5,6 +5,9 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Services
  */
+// Yaml Configuration
+$app->register(new ServiceProviders\YamlConfigurationServiceProvider());
+
 // Twig
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => $app['base_dir'] . '/app/Views',
