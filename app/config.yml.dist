@@ -24,6 +24,15 @@ db.options:
     dbname: silex
     charset: 'utf-8'
 
+# ORM
+# orm.proxies_dir: __BASEDIR__/src/Proxies
+# orm.em.options:
+#     mappings:
+#         -
+#             type: annotation
+#             namespace: Foo\Entities
+#             path: __BASEDIR__/src/Foo/Entities
+
 # Swiftmailer
 swiftmailer.options:
     host: localhost

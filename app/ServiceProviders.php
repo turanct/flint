@@ -1,5 +1,6 @@
 <?php
 
+use Dflydev\Silex\Provider\DoctrineOrm\DoctrineOrmServiceProvider;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -55,8 +56,11 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
     return $translator;
 }));
 
-// Doctrine provider
+// Doctrine DBAL provider
 $app->register(new Silex\Provider\DoctrineServiceProvider());
+
+// Doctrine ORM provider
+$app->register(new DoctrineOrmServiceProvider());
 
 // Cache provider
 $app->register(new Silex\Provider\HttpCacheServiceProvider());

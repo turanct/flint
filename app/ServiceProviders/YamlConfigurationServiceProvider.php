@@ -21,12 +21,13 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         // Load YAML configs
-        $configurations = Yaml::parse(
-            file_get_contents($app['base_dir'] . '/app/config.yml')
-        );
+        $yaml = file_get_contents($app['base_dir'] . '/app/config.yml');
+        $yaml = str_replace('__BASEDIR__', $app['base_dir'], $yaml);
+
+        $configurations = Yaml::parse($yaml);
 
         foreach ($configurations as $key => $value) {
-            $app[$key] = str_replace('__BASEDIR__', $app['base_dir'], $value);
+            $app[$key] = $value;
         }
     }
 

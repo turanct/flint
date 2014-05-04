@@ -16,6 +16,25 @@ Requirements
 - Configuration via YAML file(s) [Yaml Config Service Provider](https://github.com/deralex/YamlConfigServiceProvider)
 
 
+Vagrant
+----------------------------------------
+
+- PHP settings
+- PHP versions
+- xdebug setings
+- opcode caching
+
+
+Doctrine
+----------------------------------------
+
+### Create tables
+
+```
+php vendor/bin/doctrine orm:schema-tool:create
+```
+
+
 Questions
 ----------------------------------------
 
