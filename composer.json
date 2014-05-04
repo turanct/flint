@@ -22,6 +22,7 @@
     },
     "autoload": {
         "psr-0": {
+             "Core": "app",
              "ServiceProviders": "app",
              "Controllers": "app"
          }
