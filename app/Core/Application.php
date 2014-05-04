@@ -38,4 +38,44 @@ class Application extends \Silex\Application
         // Controllers
         $controllersList->register($app);
     }
+
+    /**
+     * Get a Silex controller factory
+     *
+     * @return \Silex\ControllerCollection
+     */
+    public function getControllersFactory()
+    {
+        return $this['controllers_factory'];
+    }
+
+    /**
+     * Get a monolog logger instance
+     *
+     * @return \Monolog\Logger
+     */
+    public function getLogger()
+    {
+        return $this['monolog'];
+    }
+
+    /**
+     * Get a twig instance
+     *
+     * @return \Twig_Environment
+     */
+    public function getTwig()
+    {
+        return $this['twig'];
+    }
+
+    /**
+     * Get a translator instance
+     *
+     * @return \Silex\Translator
+     */
+    public function getTranslator()
+    {
+        return $this['translator'];
+    }
 }
