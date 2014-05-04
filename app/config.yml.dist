@@ -22,7 +22,6 @@ db.options:
     user: root
     password: root
     dbname: silex
-    charset: 'utf-8'
 
 # ORM
 # orm.proxies_dir: __BASEDIR__/src/Proxies
