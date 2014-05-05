@@ -20,4 +20,3 @@ $app = new Core\Application(
 
 // Run the application
 $app['http_cache']->run();
-

@@ -1,4 +1,9 @@
 <?php
+/**
+ * This file is part of turanct/flint
+ *
+ * @author Toon Daelman <spinnewebber_toon@hotmail.com>
+ */
 
 namespace Core;
 

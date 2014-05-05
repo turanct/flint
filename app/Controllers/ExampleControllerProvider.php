@@ -1,12 +1,30 @@
 <?php
+/**
+ * This file is part of turanct/flint
+ *
+ * @author Toon Daelman <spinnewebber_toon@hotmail.com>
+ */
+
 namespace Controllers;
 
 use Silex\Application;
 use Silex\ControllerProviderInterface;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * This is an Example ControllerProvider
+ *
+ * @author Toon Daelman <spinnewebber_toon@hotmail.com>
+ */
 class ExampleControllerProvider implements ControllerProviderInterface
 {
+    /**
+     * Connect method
+     *
+     * This method will be called by Silex\Application when it's time to connect
+     *
+     * @param Silex\Application $app The app instance
+     */
     public function connect(Application $app)
     {
         // creates a new controller based on the default route

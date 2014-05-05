@@ -1,5 +1,7 @@
-Turanct Silex Application
+Flint
 ========================================
+
+A Silex application skeleton.
 
 Requirements
 ----------------------------------------
@@ -33,11 +35,3 @@ Doctrine
 ```
 php vendor/bin/doctrine orm:schema-tool:create
 ```
-
-
-Questions
-----------------------------------------
-
-- Can we extend the `Silex\Application` so that we can assign services and controllers outside of the index.php page?
-- How will we structure the framework?
-

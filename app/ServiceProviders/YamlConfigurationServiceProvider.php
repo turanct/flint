@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of turanct/sef
+ * This file is part of turanct/flint
  *
  * @author Toon Daelman <spinnewebber_toon@hotmail.com>
  */
@@ -18,6 +18,13 @@ use Symfony\Component\Yaml\Yaml;
  */
 class YamlConfigurationServiceProvider implements ServiceProviderInterface
 {
+    /**
+     * Register method
+     *
+     * This method will be called by Silex\Application when it's time to register
+     *
+     * @param Silex\Application $app The app instance
+     */
     public function register(Application $app)
     {
         // Load YAML configs
@@ -31,6 +38,13 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
         }
     }
 
+    /**
+     * Boot method
+     *
+     * This method will be called by Silex\Application when it's time to boot
+     *
+     * @param Silex\Application $app The app instance
+     */
     public function boot(Application $app)
     {
     }
